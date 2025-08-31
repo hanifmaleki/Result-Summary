@@ -1,0 +1,18 @@
+@use 'variables';
+@use 'result';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 400;
+    background-color: variables.$pale-blue;
+}
+
+.attribution {
+    margin-block-start: calc(2rem + 2vw);
+    text-align: center;
+}

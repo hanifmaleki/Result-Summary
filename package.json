@@ -1,0 +1,52 @@
+{
+  "name": "result-summary",
+  "version": "1.0.0",
+  "description": "This challenge has something for everyone. It’s a HTML and CSS only project, but we’ve also provided a JSON file of the test results for anyone wanting to practice JS.",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass src/scss:dist/css --watch",
+    "pug": "pug src/pug --pretty --watch --out dist",
+    "watch-js": "watch 'copy-files-from-to --when-file-exists overwrite' src/js",
+    "dev": "concurrently \"npm run scss\" \"npm run pug\" \"npm run watch-js\" \"live-server dist\"",
+    "scss:build": "sass src/scss:dist/css --style=compressed",
+    "pug:build": "pug src/pug --out dist",
+    "copy-js": "copy-files-from-to src/js dist/js --when-file-exists overwrite",
+    "build": "npm run scss:build && npm run pug:build && npm run copy-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanifmaleki/Result-Summary.git"
+  },
+  "keywords": [
+    "result-summary-component",
+    "html",
+    "css",
+    "javascript",
+    "scss",
+    "learn"
+  ],
+  "author": "Hanif Maleki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hanifmaleki/Result-Summary/issues"
+  },
+  "homepage": "https://github.com/hanifmaleki/Result-Summary#readme",
+  "copyFiles": [
+    {
+      "from": "src/js",
+      "to": "dist"
+    },
+    {
+      "from": "assets",
+      "to": "dist/assets"
+    }
+  ],
+  "dependencies": {
+    "concurrently": "^9.2.1",
+    "copy-files-from-to": "^3.12.1",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.91.0",
+    "watch": "^1.0.2"
+  }
+}

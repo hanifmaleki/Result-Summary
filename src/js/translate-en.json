@@ -1,0 +1,14 @@
+{
+    "title": "Result Summary",
+    "your_result": "Your Result",
+    "summary": "Summary",
+    "of_100_sign": "/ 100",
+    "of_100_text": "of 100",
+    "quality_title": "Great",
+    "quality_description": "You have scored higher than {percent}% of the people who have taken these tests",
+    "continue": "Continue",
+    "reaction": "Reaction",
+    "memory": "Memory",
+    "verbal": "Verbal",
+    "visual": "Visual"
+}

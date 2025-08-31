@@ -1,0 +1,42 @@
+// Colors
+:root {
+    --color-state-blue: hsl(252, 100%, 67%);
+    --color-royal-blue: hsl(241, 72%, 54%);
+    --color-violet-blue: hsl(256, 72%, 46%, 1);
+    --color-persian-blue: hsl(241, 72%, 46%, 0);
+
+    --color-white: hsl(0, 0%, 100%);
+    --color-pale-blue: hsl(221, 100%, 96%);
+    --color-light-lavender: hsl(241, 100%, 89%);
+    --color-dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+// SCSS variables referencing CSS variables
+$state-blue: var(--color-state-blue);
+$royal-blue: var(--color-royal-blue);
+$violet-blue: var(--color-violet-blue);
+$persian-blue: var(--color-persian-blue);
+
+$white: var(--color-white);
+$pale-blue: var(--color-pale-blue);
+$light-lavender: var(--color-light-lavender);
+$dark-gray-blue: var(--color-dark-gray-blue);
+
+// Font Sizes
+$fs-base: 1.125rem;
+$fs-lg: 1.25rem;
+$fs-xl: 1.5rem;
+$fs-xxl: 2rem;
+$fs-xxxl: 3rem;
+
+// Line-heights
+$lh-base: 1.625rem;
+
+//Breakpoint
+$bp-sm: 480px;
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == sm {
+        @media (min-width: $bp-sm) { @content }
+    }
+}

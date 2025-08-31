@@ -1,0 +1,19 @@
+include mixins/category.pug
+
+.result-container(id='resultContainer')
+    .overview-container(id='overviewContainer')
+        h1= 'your_result'
+        .result-score-outer-container 
+            .result-score-inner-container 
+                .result-score(id='resultScore')
+                .result-upper-bound
+        .result-quality-container 
+            .quality-title='quality_title'
+            .quality-description='quality_description'
+    .summary-container(id='summary-container')
+        .summary-title __summary
+        +category('reaction')
+        +category('memory')
+        +category('verbal')
+        +category('visual')
+        button(id='continueButton', type='button') __continue
